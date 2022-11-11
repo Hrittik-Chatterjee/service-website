@@ -1,0 +1,52 @@
+[
+    {
+        "service_id": "01",
+        "title": "Oral Hygiene",
+        "img": "https://i.ibb.co/yP8Dq67/slider1.jpg",
+        "price": "20.00",
+        "description": "During an oral hygiene appointment you will receive a professional teeth clean. Your dental hygienist will remove plaque (dental biofilm) and calculus (tartar) from the surface of your teeth and around the gum line",
+        "side_effects":"Poor oral hygiene can lead to dental cavities and gum disease, and has also been linked to heart disease, cancer, and diabetes. Maintaining healthy teeth and gums is a lifelong commitment."
+    },
+    {
+        "service_id": "02",
+        "title": "Braces",
+        "img": "https://i.ibb.co/HPDprdG/slider2.jpg",
+        "price": "20.00",
+        "description": "Metal braces are very strong and can withstand most types of treatment. They consist of very small metal brackets (attachments) that are glued to the front of your teeth. A metal wire is attached to the brackets and held by ligatures. There is a wide range of ligatures available, ranging from transparent to silver (to match the metal braces) and to a variety of colors.",
+        "side_effects":"Your mouth would not be used to the wires and brackets that make up the braces you are wearing, and it will take a while for your lips to adjust to the right position. Jaw pain is a possible side effect of braces, especially if your treatment requires the realignment of your jaw. Over-the-counter pain medications may help manage this pain, depending on its severity. This may reoccur after every tightening, as well."
+    },
+    {
+        "service_id": "03",
+        "title": "Dental Implants",
+        "img": "https://i.ibb.co/XjKV8Qx/slider3.jpg",
+        "price": "200.00",
+        "description": " Dental implants patient typically have damaged teeth.When you visit your dentist for Dental Implant, he or she will first take an X-ray of your mouth to assess your bite. The location of the missing teeth and the location in the jawbone where the Implant will be placed will be assessed also. Your dentist may also make models of your teeth to further inform the operation.You blood test and other relevant physical fitness report is essential before Implant surgery to ensure best outcome",
+        "side_effects":"Like any surgery, dental implant surgery poses some health risks. Problems are rare though, and when they do occur they're usually minor and easily treated. Risks include:Infection at the implant site Injury or damage to surrounding structures, such as other teeth or blood vessels Nerve damage, which can cause pain, numbness or tingling in your natural teeth, gums, lips or chin Sinus problems, when dental implants placed in the upper jaw protrude into one of your sinus cavities"
+        
+    },
+    {
+        "service_id": "04",
+        "title": "Whitening",
+        "img": "https://i.ibb.co/KmXrFR6/slider4.jpg",
+        "price": "150.00",
+        "description": "Everyone notices a bright, white, glowing smile. And everyone notices how confident you feel when you have that beautiful smile. That’s why we utilize long-lasting Teeth Whitening procedure — because we want you to glow with pride and confidence.",
+        "side_effects":""
+    },
+    {
+        "service_id": "05",
+        "title": "cosmetic denistry",
+        "img": "https://i.ibb.co/7k7xWKJ/slider5.jpg",
+        "price": "30.00",
+        "description": "Cosmetic dentistry focuses on improving the appearance and aesthetics of your smile. Common cosmetic dental procedures include teeth whitening, dental bonding and veneers As long as you have healthy teeth and gums, you can pursue cosmetic dental treatments.",
+        "side_effects":"If you already have sensitive teeth or experience pain when eating certain foods or drinks, you may feel discomfort or pain when the bleaching solution is applied to the surface of your teeth. Make sure to inform your dentist of your sensitivity issue so that they can recommend products such as special toothpaste to reduce this risk and increase comfort during your procedure."
+    },
+    {
+        "service_id": "06",
+        "title": "Oral surgery",
+        "img": "https://i.ibb.co/rmh8z6t/slider6.jpg",
+        "price": "20.00",
+        "description": "Oral surgery refers to any surgical procedure performed on your teeth, gums, jaws or other oral structures. This includes extractions, implants, gum grafts and jaw surgeries. Oral surgery is usually performed by an oral and maxillofacial surgeon or a periodontist. These are dental specialists who have advanced training in oral surgery procedures. ",
+        "side_effects":"A reaction to anesthesia can cause confusion, along with a sore throat, nausea and sleepiness, though effects usually wear off within 24 hours. Tooth extractions carry a risk of dry socket, a painful condition that may arise a few days after surgery. With a dry socket, the extraction site fails to heal properly"
+        
+    }
+]
