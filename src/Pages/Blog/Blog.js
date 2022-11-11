@@ -14,7 +14,7 @@ const Blog = () => {
             </div>
             <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
-                    Focus me to see content
+                What is JWT, and how does it work?
                 </div>
                 <div className="collapse-content">
                     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
@@ -22,7 +22,7 @@ const Blog = () => {
             </div>
             <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
-                    Focus me to see content
+                What is the difference between javascript and NodeJS?
                 </div>
                 <div className="collapse-content">
                     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
@@ -30,7 +30,7 @@ const Blog = () => {
             </div>
             <div tabIndex={0} className="collapse collapse-plus border border-base-300 bg-base-100 rounded-box">
                 <div className="collapse-title text-xl font-medium">
-                    Focus me to see content
+                How does NodeJS handle multiple requests at the same time?
                 </div>
                 <div className="collapse-content">
                     <p>tabIndex={0} attribute is necessary to make the div focusable</p>
