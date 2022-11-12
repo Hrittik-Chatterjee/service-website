@@ -2,11 +2,11 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const Checkout = () => {
-    const data =useLoaderData()
-    console.log(data)
+    const {title} =useLoaderData()
+    
     return (
         <div>
-            <h1>name</h1>
+            <h1>{title}</h1>
         </div>
     );
 };
