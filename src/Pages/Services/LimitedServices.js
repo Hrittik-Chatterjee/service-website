@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import CardService from './CardService';
 
-
-const Services = () => {
+const LimitedServices = () => {
     const [services,settServices]= useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/services')
+        fetch('http://localhost:5000/limited')
         .then(res =>res.json())
         .then(data => settServices(data))
     })
@@ -19,8 +19,14 @@ const Services = () => {
                     services.map(service => <CardService key={service._id} service={service}></CardService>)
                 }
             </div>
+            <Link to={'/services'}><button className='btn my-8 mx-auto flex'>Show More Services</button></Link>
         </div>
     );
 };
 
-export default Services;
+export default LimitedServices;
+
+
+
+
+
