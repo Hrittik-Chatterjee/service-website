@@ -3,7 +3,9 @@ import Main from "../../Layout/Main";
 import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import MyReviews from "../../Pages/MyReviews/MyReviews";
 import Checkout from "../../Pages/ServiceDetails/Checkout";
+import AddService from "../../Pages/Services/AddService";
 import Services from "../../Pages/Services/Services";
 import SignUp from "../../Pages/SignUp/SignUp";
 
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
         {
           path:'/checkout',
           element:<Checkout></Checkout>,
+        },
+        {
+          path:'/addservices',
+          element:<AddService></AddService>
+        },
+        {
+          path:'/myreviews',
+          element:<MyReviews></MyReviews>
         }
       ]
     }

@@ -20,8 +20,13 @@ const Header = () => {
                         <li><Link to='/home'>Home</Link></li>
                         <li><Link to='/services'>Services</Link></li>
                         <li><Link to='/blog'>Blog</Link></li>
-
-
+                        {
+                            user && user?.uid ?
+                                <div>
+                                    <li><Link to={'/myreviews'}>My reviews</Link></li>
+                                    <li> <Link to={'/addservices'}>Add Services</Link></li>
+                                </div> : <div> </div>
+                        }
                     </ul>
                 </div>
                 <a href='/' className="btn btn-ghost normal-case text-xl">Dr Alexa Maria</a>
@@ -32,19 +37,23 @@ const Header = () => {
                     <li><Link to='/services'>Services</Link></li>
                     <li><Link to='/blog'>Blog</Link></li>
                     {
-                        user && user?.uid ? <li><Link to={'/myreviews'}>My reviews</Link></li> : <div> </div>
+                        user && user?.uid ?
+                            <div className='flex'>
+                                <li><Link to={'/myreviews'}>My reviews</Link></li>
+                                <li> <Link to={'/addservices'}>Add Services</Link></li>
+                            </div> : <div> </div>
                     }
                 </ul>
             </div>
             {
                 user && user?.uid ?
-                 <div className="navbar-end">
-                    <Link to='/login' className="btn" onClick={handleLogOut}>Logout</Link>
-                </div> 
-                : 
-                <div className="navbar-end">
-                    <Link to='/login' className="btn" >Login</Link>
-                </div>
+                    <div className="navbar-end">
+                        <Link to='/login' className="btn" onClick={handleLogOut}>Logout</Link>
+                    </div>
+                    :
+                    <div className="navbar-end">
+                        <Link to='/login' className="btn" >Login</Link>
+                    </div>
             }
         </div>
     );
