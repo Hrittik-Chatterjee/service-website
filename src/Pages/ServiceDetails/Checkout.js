@@ -1,8 +1,31 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Checkout = () => {
-    const { title, img, description, side_effects } = useLoaderData()
+    const { title, img, description, side_effects,_id } = useLoaderData()
+    const { user } = useContext(AuthContext)
+
+
+    const handlePlaceReview = event =>{
+        event.preventDefault()
+        const form =event.target
+        const name=user?.displayName
+        const photo=user?.photoURL
+        const review = form.review.value
+        const email =user?.email
+
+
+        const reviewList = {
+            service : _id,
+            serviceName: title,
+            patient:name,
+            email:email,
+            photo:photo,
+            review:review
+
+        }
+    }
 
     return (
         <div>
@@ -18,14 +41,30 @@ const Checkout = () => {
                 </div>
 
             </div>
-            <div>
-                <form action="">
-                    <h1 className='text-red-700 font-semibold text-xl mb-4 mt-12'>Add Your Review Bellow</h1>
-                    <input className='bg-gray-500 rounded h-14' type="text" name='review' />
-                    <br />
-                    <button className='btn btn-primary px-4 py-0 my-3 '> Add</button>
-                </form>
-            </div>
+            {
+                user && user?.uid ?
+                    <div>
+                        <form onSubmit={handlePlaceReview}>
+                            <div className="overflow-x-auto w-full">
+                                <div className="flex items-center space-x-3">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12 my-4">
+                                            <img src={user?.photoURL} alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div className="font-bold">{user?.displayName}</div>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="Your Review Here" name='review' className="input input-bordered input-info w-full max-w-xs" />
+                                <br />
+                                <button className='btn btn-primary px-4 py-0 my-3 '> Add</button>
+                            </div>
+                        </form>
+                    </div>
+                    :
+                    <div> <p className=' text-blue-700 text-center text-3xl my-4'>Please Log in to add a Review</p></div>
+            }
         </div>
     );
 };
