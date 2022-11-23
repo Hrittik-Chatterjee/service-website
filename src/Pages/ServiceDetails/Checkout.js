@@ -3,28 +3,44 @@ import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Checkout = () => {
-    const { title, img, description, side_effects,_id } = useLoaderData()
+    const { title, img, description, side_effects, _id } = useLoaderData()
     const { user } = useContext(AuthContext)
 
 
-    const handlePlaceReview = event =>{
+    const handlePlaceReview = event => {
         event.preventDefault()
-        const form =event.target
-        const name=user?.displayName
-        const photo=user?.photoURL
+        const form = event.target
+        const name = user?.displayName
+        const photo = user?.photoURL
         const review = form.review.value
-        const email =user?.email
+        const email = user?.email
 
 
         const reviewList = {
-            service : _id,
+            service: _id,
             serviceName: title,
-            patient:name,
-            email:email,
-            photo:photo,
-            review:review
+            patient: name,
+            email: email,
+            photo: photo,
+            review: review
 
         }
+
+        fetch('http://localhost:5000/reviews', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(reviewList)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.ackowledged)
+                    alert('Review added')
+                form.reset()
+            })
+            .catch(er => console.log(er))
     }
 
     return (
@@ -56,7 +72,7 @@ const Checkout = () => {
                                         <div className="font-bold">{user?.displayName}</div>
                                     </div>
                                 </div>
-                                <input type="text" placeholder="Your Review Here" name='review' className="input input-bordered input-info w-full max-w-xs" />
+                                <input type="text" placeholder="Your Review Here" name='review' className="input input-bordered input-info w-full max-w-xs" required />
                                 <br />
                                 <button className='btn btn-primary px-4 py-0 my-3 '> Add</button>
                             </div>
