@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import AllReviews from '../AllReviews/AllReviews';
 
 const Checkout = () => {
     const { title, img, description, side_effects, _id } = useLoaderData()
@@ -57,6 +58,8 @@ const Checkout = () => {
                 </div>
 
             </div>
+            <div><h1 className=' text-3xl text-yellow-700 font-bold font-sans'>Reviews:</h1></div>
+            <AllReviews></AllReviews>
             {
                 user && user?.uid ?
                     <div>

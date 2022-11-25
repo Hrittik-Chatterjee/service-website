@@ -17,11 +17,16 @@ const MyReviews = () => {
 
 
     return (
-            <div>
-                {
-                    reviews.map(reviewList => <ReviewMap key={reviewList._id} reviewList={reviewList}></ReviewMap>)
-                }
-            </div>
+        <div>
+            {
+                reviews.length !== 0 ? <div>
+                    {
+                        reviews.map(reviewList => <ReviewMap key={reviewList._id} reviewList={reviewList}></ReviewMap>)
+                    }
+                </div>
+                    : <div><h2 className='my-36 text-center text-4xl font-bold'>No Reviews Added</h2></div>
+            }
+        </div>
     );
 };
 
