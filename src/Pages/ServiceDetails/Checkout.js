@@ -37,7 +37,7 @@ const Checkout = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.ackowledged)
+                if (data.acknowledged)
                     alert('Review added')
                 form.reset()
             })
