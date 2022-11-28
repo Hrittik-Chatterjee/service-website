@@ -44,7 +44,7 @@ const router = createBrowserRouter([
         {
           path:'/services/:id',
           element:<Checkout></Checkout>,
-          loader:({params}) =>fetch(`http://localhost:5000/services/${params.id}`)
+          loader:({params}) =>fetch(`https://service-server-rnwu6n1kt-hrittik-chatterjee.vercel.app/services/${params.id}`)
         },
         {
           path:'/checkout',
@@ -61,7 +61,7 @@ const router = createBrowserRouter([
         {
           path:'/addserviceconfirm/:id',
           element:<AddServiceConfirm></AddServiceConfirm>,
-          loader:({params}) =>fetch(`http://localhost:5000/services/${params.id}`)
+          loader:({params}) =>fetch(`https://service-server-rnwu6n1kt-hrittik-chatterjee.vercel.app/services/${params.id}`)
         },
         {
           path:'orders',

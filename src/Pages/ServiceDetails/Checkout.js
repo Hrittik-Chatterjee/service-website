@@ -27,7 +27,7 @@ const Checkout = () => {
 
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://service-server-rnwu6n1kt-hrittik-chatterjee.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

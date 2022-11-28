@@ -5,7 +5,7 @@ const AllReviews = () => {
     const [allRevews, settAllReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?_id=${allRevews.service}`)
+        fetch(`https://service-server-rnwu6n1kt-hrittik-chatterjee.vercel.app/reviews?_id=${allRevews.service}`)
             .then(res => res.json())
             .then(data => settAllReviews(data))
     }, [allRevews.service])
